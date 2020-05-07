@@ -15,14 +15,14 @@ pipeline{
 					echo "Build"
 				}
 			}
-				stage('Build'){
+				stage('Test'){
 				steps{
-					echo "Build"
+					echo "Test"
 				}
 			}
-				stage('Build'){
+				stage('Integration test'){
 				steps{
-					echo "Build"
+					echo "Integration test"
 				}
 			}
 		}

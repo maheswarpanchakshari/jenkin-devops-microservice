@@ -20,8 +20,6 @@ pipeline{
 	    stages {
 			stage('Build'){
 				steps{
-					sh 'groupadd docker'
-					// sh 'gpasswd -a $USER docker'
 				    sh 'mvn --version'
 				    sh 'docker version'
 					echo "PATH -$PATH"

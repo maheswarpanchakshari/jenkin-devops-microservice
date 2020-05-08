@@ -8,10 +8,14 @@
 
 // Declarative pipeline
 pipeline{
-     agent {docker { image 'maven:3.6.3'}}
+    //  agent {docker { image 'maven:3.6.3'}}
+	    agent any
 	    stages {
 			stage('Build'){
 				steps{
+					
+					echo "PATH -$PATH"
+					echo "BUILD_NUMBER -$env.BUILD_NUMBER"
 					echo "maven version is"
 					sh 'mvn --version'
 					echo "Build"
